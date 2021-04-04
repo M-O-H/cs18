@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <!--===== scripts =====-->
+        <script defer  src="/script/navbar.js"></script>
+        <script defer src="/script/ajax.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="main.css">
+        <title>Main</title>
+    </head>
+    <body id="body-pd" class="js-stop-transition">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <div class="header__img">
+                <select name="language" id="lang" class="lang">
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Chitat</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active">
+                        <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">announcements</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Profile</span>
+                        </a>
+                        
+                        <a href="#" class="nav__link" id="sub__link">
+                            <i class='bx bx-book-content nav__icon' ></i>
+                            <span class="nav__name">Subject</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-book-alt nav__icon' ></i>
+                            <span class="nav__name">Assigment</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message nav__icon' ></i>
+                            <span class="nav__name">Contact</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-search nav__icon' ></i>
+                            <span class="nav__name">Help</span>
+                        </a>
+                    </div>
+                </div>
+                <form action="/logout?_method=DELETE" method="POST">
+                    <button type="submit" class="nav__link">
+                        <i class='bx bx-log-out nav__icon' ></i>
+                        <span class="nav__name">Log Out</span>
+                    </button>
+                    </form>
+            </nav>
+        </div>
+
+        <main id="main">
+        </main>
+
+        <!-- ===== remove class ==== -->
+        <script>document.body.classList.remove('js-stop-transition')</script>
+    </body>
+</html>

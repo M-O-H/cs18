@@ -1,0 +1,97 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: var(--font-color-h);
+}
+
+/* cards */
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 16rem;
+  height: 19rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 1rem 2em;
+  background-color: var(--card-bg);
+}
+
+.card:hover {
+  transition: 0.3s;
+  transform: scale(1.03);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+img {
+  width: 16rem;
+  height: 14rem;
+}
+
+.rs {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--body-font);
+  color: var(--font-color);
+}
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.79rem;
+  font-size: 15px;
+  background-color: var(--card-bg);
+  outline: none;
+  cursor: pointer;
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 16rem;
+    height: 18rem;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin: 1rem 1em;
+    background-color: var(--card-bg);
+  }
+
+  img {
+    width: 16rem;
+    height: 14rem;
+  }
+}
+
+@media only screen and (min-width: 200px) {
+  .card {
+    width: 16rem;
+    height: 18rem;
+    background-color: var(--card-bg);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

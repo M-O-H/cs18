@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logStyle.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="log-container">
+            <div class="auth">
+                <div class="text">
+                    <h1>Welcome Back</h1>
+                    <p>Login and connect with 1millions of users</p>
+                    <P>online and have fun!</P>
+                </div>
+                <img src="/SVG/undraw_Share_opinion_re_4qk7.svg" alt="undraw-svg">
+            </div>
+            <form action="/login" method="POST">
+                <h1>Login</h1>
+                <% if(error != '') { %>
+                    <div class="message">
+                        <%= error %>
+                    </div>
+                <% } %>
+                <% if(error_msg != '') { %>
+                    <div class="message">
+                        <%= error_msg %>
+                    </div>
+                <% } %>
+                <% if(success_msg != '') { %>  
+                    <div class="message-success">
+                        <%= success_msg %>
+                    </div>
+                <% } %>
+                <div class="input-div">
+                    <input type="email" placeholder="Email" id="email" name="email" value="<%= typeof email != 'undefined' ? email: ''  %>" required>
+                </div>
+                <div class="input-div">
+                    <input type="password"placeholder="Password" id="password" name="password" required>
+                </div>
+                <div class="submit-action">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="sign-up-div">
+                    <p>create account <strong><a href="/register">register</a></strong></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

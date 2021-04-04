@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/regStyle.css">
+    <title>register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="log-container">
+            <div class="auth">
+                <div class="text">
+                    <h1>Hello,friend!</h1>
+                    <p>Join our community, and take a good</p>
+                    <P>use of our online resources.</P>
+                </div>
+                <img src="/SVG/add-user.svg" alt="">
+            </div>
+            <form action="/register" method="POST">
+                <h1>register</h1>
+                    <% if(typeof errors != 'undefined') { %>
+                        <% errors.forEach(function(error) { %>
+                            <div class="message">
+                                <%= error.msg %>
+                            </div>
+                        <% }); %>
+                    <% } %>
+                    <div class="input-div">
+                        <input type="text" id="name" name="name" placeholder="username" value="<%= typeof name != 'undefined' ? name: ''  %>"  required>
+                    </div>
+                    <div class="input-div">
+                        <input type="email" id="email" name="email" placeholder="email" value="<%= typeof email != 'undefined' ? email: ''  %>" required>
+                    </div>
+                    <div class="input-div">
+                        <input type="password" id="password" name="password" placeholder="password"  required>
+                    </div>
+                    <div class="submit-action">
+                        <button type="submit">sign up</button>
+                    </div>
+                    <div class="sign-in-div">
+                        <p>already memeber? <strong><a href="/login">Login</a></strong></p>
+                    </div>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
